@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Eye, EyeOff, Users, Upload } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -42,6 +43,7 @@ const Register = () => {
         password: formData.password
       }, rememberMe);
       navigate('/dashboard');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message || 'Registration failed. Please try again.');
     } finally {

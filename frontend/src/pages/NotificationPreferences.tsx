@@ -44,6 +44,7 @@ const NotificationPreferences = ({ onLogout }: NotificationPreferencesProps) => 
           emailNotifications: true
         });
       }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Failed to fetch preferences:', error);
       if (error.message?.includes('404') || error.message?.includes('500')) {
@@ -67,6 +68,7 @@ const NotificationPreferences = ({ onLogout }: NotificationPreferencesProps) => 
       setIsSaving(true);
       await preferencesAPI.updatePreferences(preferences);
       toast.success('Preferences updated successfully!');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Failed to update preferences:', error);
       toast.error(error.message || 'Failed to update preferences');

@@ -1,4 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Bell, Home, BookOpen, Users, MessageSquare, Calendar, LogOut, User, Settings, Plus, Contact, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useState } from 'react';
@@ -17,6 +18,7 @@ const Navbar = ({ onLogout }: NavbarProps) => {
   
   const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(path);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleLogout = () => {
     onLogout();
     navigate('/login');

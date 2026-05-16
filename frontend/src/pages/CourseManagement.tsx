@@ -65,6 +65,7 @@ const CourseManagement = ({ onLogout }: CourseManagementProps) => {
       await fetchCourses(searchTerm);
       await fetchEnrolledCourses();
       toast.success("Enrolled Successfully!");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.message || 'Failed to enroll in course');
     } finally {
@@ -79,6 +80,7 @@ const CourseManagement = ({ onLogout }: CourseManagementProps) => {
       toast.success("Unenrolled Successfully!");
       await fetchCourses(searchTerm);
       await fetchEnrolledCourses();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.message || 'Failed to unenroll from course');
     } finally {

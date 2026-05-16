@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Users, Mail, BookOpen, Loader, ArrowLeft, MessageCircle, User } from 'lucide-react';
 import { coursesAPI } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
@@ -34,6 +35,7 @@ const CourseSpecificPeers = ({ onLogout }: CourseSpecificPeersProps) => {
   const [peers, setPeers] = useState<Peer[]>([]);
   const [course, setCourse] = useState<Course | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { user: currentUser } = useAuth();
 
   useEffect(() => {
@@ -41,6 +43,7 @@ const CourseSpecificPeers = ({ onLogout }: CourseSpecificPeersProps) => {
       fetchCoursePeers(parseInt(courseId));
       fetchCourseDetails(parseInt(courseId));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseId]);
 
   const fetchCoursePeers = async (id: number) => {

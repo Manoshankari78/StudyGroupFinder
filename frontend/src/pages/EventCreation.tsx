@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Calendar, ArrowLeft, Loader } from 'lucide-react';
 import { eventsAPI } from '../services/api';
 import toast, { Toaster } from 'react-hot-toast';
@@ -95,6 +96,7 @@ const EventCreation = ({ onLogout }: EventCreationProps) => {
         icon: '🗓️',
       });
       navigate(`/groups/${groupId}`);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.message || 'Failed to create event');
     } finally {

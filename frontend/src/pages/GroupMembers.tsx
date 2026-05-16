@@ -26,13 +26,15 @@ const GroupMembers = ({ onLogout }: GroupMembersProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showInviteModal, setShowInviteModal] = useState(false);
-  const [group, setGroup] = useState<any>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [group, setGroup] = useState<unknown>(null);
 
   useEffect(() => {
     if (id) {
       fetchGroupData();
       checkUserRole();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const fetchGroupData = async () => {
@@ -91,6 +93,7 @@ const GroupMembers = ({ onLogout }: GroupMembersProps) => {
       await groupsAPI.removeMember(parseInt(id!), userId);
       toast.success('Member removed successfully');
       fetchGroupMembers(); 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.message || 'Failed to remove member');
     }

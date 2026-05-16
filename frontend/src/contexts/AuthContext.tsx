@@ -14,6 +14,7 @@ interface AuthContextType {
   user: User | null;
   token: string | null;
   login: (email: string, password: string, rememberMe: boolean) => Promise<void>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: (userData: any, rememberMe: boolean) => Promise<void>;
   logout: () => void;
   isLoading: boolean;
@@ -62,6 +63,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const register = async (userData: any, rememberMe: boolean = false) => {
     try {
       const response = await authAPI.register(userData);

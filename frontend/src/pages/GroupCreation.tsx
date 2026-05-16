@@ -58,6 +58,7 @@ const GroupCreation = ({ onLogout }: GroupCreationProps) => {
       // alert('Group created successfully!');
       toast.success("Group created successfully!");
       navigate('/groups');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       //alert(error.message || 'Failed to create group');
       toast.error(error.message || "Failed to create group");

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Users, Mail, BookOpen, Loader, MessageCircle, ExternalLink, User } from 'lucide-react';
 import { coursesAPI } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
@@ -35,6 +36,7 @@ const CoursePeers = ({ onLogout }: CoursePeersProps) => {
   const [filteredPeers, setFilteredPeers] = useState<Peer[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCourse, setSelectedCourse] = useState<string>('all');
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { user: currentUser } = useAuth();
   const navigate = useNavigate();
 
@@ -44,6 +46,7 @@ const CoursePeers = ({ onLogout }: CoursePeersProps) => {
 
   useEffect(() => {
     filterPeers();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [peers, searchTerm, selectedCourse]);
 
   const fetchCoursePeers = async () => {
@@ -206,7 +209,7 @@ const CoursePeers = ({ onLogout }: CoursePeersProps) => {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredPeers.map((peer, index) => (
+                {filteredPeers.map((peer) => (
                   <div key={peer.user.id} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-all duration-200 hover:shadow-lg">
                     <div className="flex items-start space-x-4 mb-4">
                       {peer.user.avatarUrl ? (

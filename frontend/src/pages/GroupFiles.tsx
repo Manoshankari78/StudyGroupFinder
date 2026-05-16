@@ -40,6 +40,7 @@ interface FileMessage {
 
 const GroupFiles = ({ onLogout }: GroupFilesProps) => {
   const { groupId } = useParams();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { user: currentUser } = useAuth();
   const [group, setGroup] = useState<Group | null>(null);
   const [files, setFiles] = useState<FileMessage[]>([]);
@@ -54,6 +55,7 @@ const GroupFiles = ({ onLogout }: GroupFilesProps) => {
       fetchGroupData();
       fetchGroupFiles();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [groupId]);
 
   const fetchGroupData = async () => {

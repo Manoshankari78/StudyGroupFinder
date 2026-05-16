@@ -1,7 +1,6 @@
 package com.studygroup.backend.service;
 
 import com.studygroup.backend.entity.Course;
-import com.studygroup.backend.entity.Group;
 import com.studygroup.backend.entity.User;
 import com.studygroup.backend.entity.UserCourse;
 import com.studygroup.backend.repository.CourseRepository;

@@ -5,7 +5,6 @@ import com.studygroup.backend.repository.GroupRepository;
 import com.studygroup.backend.repository.GroupMemberRepository;
 import com.studygroup.backend.repository.CourseRepository;
 import com.studygroup.backend.repository.UserRepository;
-import com.studygroup.backend.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -83,8 +82,8 @@ public class GroupService {
     }
 
     public List<Group> getRecommendedGroups(Long userId) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        //User user = userRepository.findById(userId)
+                //.orElseThrow(() -> new RuntimeException("User not found"));
 
         // Get user's enrolled courses
         List<Course> userCourses = getEnrolledCourses(userId);

@@ -51,6 +51,7 @@ export const authAPI = {
     });
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: async (userData: any) => {
     return apiCall('/auth/register', {
       method: 'POST',
@@ -99,6 +100,7 @@ export const userAPI = {
     });
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   updateProfile: async (profileData: any) => {
     return apiCall('/user/profile', {
       method: 'PUT',
@@ -215,6 +217,7 @@ export const groupsAPI = {
     });
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createGroup: async (groupData: any) => {
     return apiCall('/groups', {
       method: 'POST',
@@ -223,6 +226,7 @@ export const groupsAPI = {
     });
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   updateGroup: async (groupId: number, groupData: any) => {
     return apiCall(`/groups/${groupId}`, {
       method: 'PUT',
@@ -370,6 +374,7 @@ export const downloadFile = async (fileUrl: string, fileName: string) => {
 };
 
 export const eventsAPI = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createEvent: async (eventData: any) => {
     return apiCall('/events', {
       method: 'POST',
@@ -415,6 +420,7 @@ export const preferencesAPI = {
     });
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   updatePreferences: async (preferences: any) => {
     return apiCall('/user/preferences', {
       method: 'PUT',

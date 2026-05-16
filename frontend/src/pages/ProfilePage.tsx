@@ -125,6 +125,7 @@ const ProfilePage = ({ onLogout }: ProfilePageProps) => {
       setIsEditing(false);
       // alert('Profile updated successfully!');
       toast.success("Profile updated successfully!");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Update profile error:', error);
       alert(error.message || 'Failed to update profile. Please try again.');
@@ -156,6 +157,7 @@ const ProfilePage = ({ onLogout }: ProfilePageProps) => {
         newPassword: '',
         confirmPassword: ''
       });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Password change error:', error);
       alert(error.message || 'Failed to change password. Please try again.');
@@ -189,6 +191,7 @@ const ProfilePage = ({ onLogout }: ProfilePageProps) => {
       setProfileData(prev => ({ ...prev, avatarUrl: '' }));
       setAvatarPreview('');
       alert('Avatar removed successfully!');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error('Remove avatar error:', error);
       alert(error.message || 'Failed to remove avatar. Please try again.');

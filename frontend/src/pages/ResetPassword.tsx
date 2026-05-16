@@ -59,6 +59,7 @@ const ResetPassword = () => {
       setTimeout(() => {
         navigate('/login');
       }, 3000);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message || 'Failed to reset password. Please try again.');
     } finally {

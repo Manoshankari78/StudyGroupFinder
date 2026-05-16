@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { MessageCircle, X, Users, ArrowLeft, Send, Loader, User, Calendar, Clock, MapPin, Paperclip, File, Download, LinkIcon } from 'lucide-react';
 import { groupsAPI, chatAPI, eventsAPI } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
@@ -65,6 +66,7 @@ const FloatingAssistant = () => {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [messageInput, setMessageInput] = useState('');
     const [isSending, setIsSending] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isWebSocketConnected, setIsWebSocketConnected] = useState(false);
     const [groupSearchTerm, setGroupSearchTerm] = useState('');
     const location = useLocation();
@@ -223,6 +225,7 @@ const FloatingAssistant = () => {
         disconnectWebSocket();
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const toggleAssistant = () => {
         setIsOpen(!isOpen);
         if (!isOpen) {

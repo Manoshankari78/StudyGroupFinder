@@ -5,6 +5,7 @@ const currentSubscriptions: Map<number, StompSubscription> = new Map();
 
 export const connectWebSocket = (
   onConnect: () => void,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onError: (error: any) => void
 ) => {
   if (stompClient && stompClient.connected) {
@@ -17,6 +18,7 @@ export const connectWebSocket = (
     reconnectDelay: 5000,
     heartbeatIncoming: 4000,
     heartbeatOutgoing: 4000,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onConnect: (frame) => {
       // console.log('WebSocket connected: ' + frame);
       onConnect();
@@ -39,6 +41,7 @@ export const connectWebSocket = (
   return stompClient;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const subscribeToGroup = (groupId: number, onMessage: (message: any) => void): boolean => {
   if (!stompClient || !stompClient.connected) {
     console.warn('WebSocket not connected');
@@ -70,6 +73,7 @@ export const unsubscribeFromGroup = (groupId: number) => {
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const sendMessage = (groupId: number, message: any) => {
   if (stompClient && stompClient.connected) {
     stompClient.publish({

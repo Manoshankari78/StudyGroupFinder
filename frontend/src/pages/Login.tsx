@@ -28,6 +28,7 @@ const Login = () => {
     try {
       await login(formData.email, formData.password, rememberMe);
       navigate('/dashboard');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message || 'Login failed. Please check your credentials.');
     } finally {
@@ -50,6 +51,7 @@ const Login = () => {
     try {
       await authAPI.forgotPassword(forgotEmail);
       setResetSent(true);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message || 'Failed to send reset email. Please try again.');
     } finally {

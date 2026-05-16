@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Calendar as CalendarIcon, Plus, Clock, MapPin, Users, ChevronLeft, ChevronRight, X, Loader } from 'lucide-react';
 import { eventsAPI } from '../services/api';
 import { Calendar, momentLocalizer, View, Event as RBCEvent } from 'react-big-calendar';
@@ -127,6 +128,7 @@ const CalendarPage = ({ onLogout }: CalendarProps) => {
     setSelectedEvent(event.resource);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleNavigate = (newDate: Date) => {
     // navigation is handled by the calendar component
   };

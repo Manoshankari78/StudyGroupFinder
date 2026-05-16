@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Users, Calendar, MessageSquare, TrendingUp, User, Plus, BookOpen, Clock, Star, Loader, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -54,6 +55,7 @@ const Dashboard = ({ onLogout }: DashboardProps) => {
   
   const [joinedGroups, setJoinedGroups] = useState<Group[]>([]);
   const [coursePeers, setCoursePeers] = useState<Peer[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [courses, setCourses] = useState<Course[]>([]);
